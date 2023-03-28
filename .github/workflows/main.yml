@@ -1,0 +1,11 @@
+name: githubAction-example
+on: [push]
+jobs:
+  build:  
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run pwd # 스텝의 이름. 실제 동작하는 코드는 run에 적기
+      run: pwd # 실제 명령
+    - name: Run ls -al
+      run: ls -al 
+      
