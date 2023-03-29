@@ -1,0 +1,14 @@
+name: github checkout
+on: [push]
+
+jobs:
+  build:
+  
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: run pwd
+      run: pwd 
+    - name: run ls -al
+      run: ls -al
