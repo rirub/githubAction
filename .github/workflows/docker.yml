@@ -13,8 +13,8 @@ jobs:
           DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USER }}
           DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
         with:
-          username: $DOCKERHUB_USER
-          password: $DOCKERHUB_TOKEN
+          username: ${{ env.DOCKERHUB_USER }}
+          password: ${{ env.DOCKERHUB_TOKEN }}
       - name: Checkout
         uses: actions/checkout@v2
       - name: Pull
